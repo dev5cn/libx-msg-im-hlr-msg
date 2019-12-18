@@ -41,7 +41,7 @@ void XmsgImHlrOtherUsrInfoQuery::handle(shared_ptr<XmsgNeUsr> nu, SptrUsr usr, S
 			return;
 		}
 		shared_ptr<XmsgImUsr> other = XmsgImUsrMgr::instance()->findXmsgImUsr(it);
-		if (other == nullptr) 
+		if (other != nullptr) 
 			others->push_back(other);
 	}
 	if (others->empty()) 
